@@ -26,3 +26,12 @@ set_property(TEST Lab3_Test5 PROPERTY PASS_REGULAR_EXPRESSION "1 2 3")
 
 add_test(NAME Lab3_Test6 COMMAND Lab3 ${CMAKE_CURRENT_SOURCE_DIR}/test6.txt)
 set_property(TEST Lab3_Test6 PROPERTY PASS_REGULAR_EXPRESSION "1 2 3 4 5 6")
+
+add_test(NAME Lab3_Test7_ForkShortest COMMAND Lab3 ${CMAKE_CURRENT_SOURCE_DIR}/test7.txt)
+set_property(TEST Lab3_Test7_ForkShortest PROPERTY PASS_REGULAR_EXPRESSION "1 2 5")
+
+add_test(NAME Lab3_Test8_Diamond COMMAND Lab3 ${CMAKE_CURRENT_SOURCE_DIR}/test8.txt)
+set_property(TEST Lab3_Test8_Diamond PROPERTY PASS_REGULAR_EXPRESSION "1 2 4 6")
+
+add_test(NAME Lab3_Test9_DeadEnd COMMAND Lab3 ${CMAKE_CURRENT_SOURCE_DIR}/test9.txt)
+set_property(TEST Lab3_Test9_DeadEnd PROPERTY PASS_REGULAR_EXPRESSION "1 3 7")
